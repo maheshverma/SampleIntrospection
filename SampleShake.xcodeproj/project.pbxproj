@@ -440,6 +440,7 @@
 				GCC_PREFIX_HEADER = "SampleShake/SampleShake-Prefix.pch";
 				INFOPLIST_FILE = "SampleShake/SampleShake-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mahesh.SampleShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,6 +455,7 @@
 				GCC_PREFIX_HEADER = "SampleShake/SampleShake-Prefix.pch";
 				INFOPLIST_FILE = "SampleShake/SampleShake-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mahesh.SampleShake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
