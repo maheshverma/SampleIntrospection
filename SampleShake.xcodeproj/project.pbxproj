@@ -22,6 +22,9 @@
 		3D0E8A9019386C7200847B66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0E8A6F19386C7100847B66 /* UIKit.framework */; };
 		3D0E8A9819386C7200847B66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D0E8A9619386C7200847B66 /* InfoPlist.strings */; };
 		3D0E8A9A19386C7200847B66 /* SampleShakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E8A9919386C7200847B66 /* SampleShakeTests.m */; };
+		3D31D037195AA9C3005E9767 /* MV_InfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D31D033195AA9C3005E9767 /* MV_InfoManager.m */; };
+		3D31D038195AA9C3005E9767 /* MV_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D31D035195AA9C3005E9767 /* MV_InfoView.m */; };
+		3D31D039195AA9C3005E9767 /* viewInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D31D036195AA9C3005E9767 /* viewInfo.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		3D0E8A9519386C7200847B66 /* SampleShakeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleShakeTests-Info.plist"; sourceTree = "<group>"; };
 		3D0E8A9719386C7200847B66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D0E8A9919386C7200847B66 /* SampleShakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleShakeTests.m; sourceTree = "<group>"; };
+		3D31D032195AA9C3005E9767 /* MV_InfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MV_InfoManager.h; sourceTree = "<group>"; };
+		3D31D033195AA9C3005E9767 /* MV_InfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MV_InfoManager.m; sourceTree = "<group>"; };
+		3D31D034195AA9C3005E9767 /* MV_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MV_InfoView.h; sourceTree = "<group>"; };
+		3D31D035195AA9C3005E9767 /* MV_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MV_InfoView.m; sourceTree = "<group>"; };
+		3D31D036195AA9C3005E9767 /* viewInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewInfo.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,7 @@
 		3D0E8A7119386C7100847B66 /* SampleShake */ = {
 			isa = PBXGroup;
 			children = (
+				3D31D031195AA9C3005E9767 /* IntrospectionComponent */,
 				3D0E8A7A19386C7100847B66 /* MV_AppDelegate.h */,
 				3D0E8A7B19386C7200847B66 /* MV_AppDelegate.m */,
 				3D0E8A7D19386C7200847B66 /* Main_iPhone.storyboard */,
@@ -155,6 +164,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3D31D031195AA9C3005E9767 /* IntrospectionComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3D31D032195AA9C3005E9767 /* MV_InfoManager.h */,
+				3D31D033195AA9C3005E9767 /* MV_InfoManager.m */,
+				3D31D034195AA9C3005E9767 /* MV_InfoView.h */,
+				3D31D035195AA9C3005E9767 /* MV_InfoView.m */,
+				3D31D036195AA9C3005E9767 /* viewInfo.xib */,
+			);
+			path = IntrospectionComponent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +186,7 @@
 				3D0E8A6419386C7100847B66 /* Sources */,
 				3D0E8A6519386C7100847B66 /* Frameworks */,
 				3D0E8A6619386C7100847B66 /* Resources */,
+				3D31D03A195AAC6F005E9767 /* Update Introspection Data */,
 			);
 			buildRules = (
 			);
@@ -235,6 +257,7 @@
 				3D0E8A8219386C7200847B66 /* Main_iPad.storyboard in Resources */,
 				3D0E8A8719386C7200847B66 /* Images.xcassets in Resources */,
 				3D0E8A7F19386C7200847B66 /* Main_iPhone.storyboard in Resources */,
+				3D31D039195AA9C3005E9767 /* viewInfo.xib in Resources */,
 				3D0E8A7619386C7100847B66 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,11 +272,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D31D03A195AAC6F005E9767 /* Update Introspection Data */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Introspection Data";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION == Debug ]; then\necho \"Bumping build number...\"\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n# increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\nif [[ \"${buildnum}\" == \"1.0\" ]]; then\nmyversion=1\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $myversion\" \"${plist}\"\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\nbuildnum=$(expr $buildnum + 1)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\nelse\nif [[ \"${buildnum}\" == \"\" ]]; then\necho \"No build number in $plist\"\nexit 2\nfi\n\nbuilddate=$(date +'%d/%m/%Y')\n/usr/libexec/Plistbuddy -c \"Set ArcheiveDate $builddate\" \"${plist}\"\n\nbuildnum=$(expr $buildnum + 1)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\nfi\nelse\necho $CONFIGURATION \" build - Not bumping build number.\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D0E8A6419386C7100847B66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D31D037195AA9C3005E9767 /* MV_InfoManager.m in Sources */,
+				3D31D038195AA9C3005E9767 /* MV_InfoView.m in Sources */,
 				3D0E8A8519386C7200847B66 /* MV_ViewController.m in Sources */,
 				3D0E8A7819386C7100847B66 /* main.m in Sources */,
 				3D0E8A7C19386C7200847B66 /* MV_AppDelegate.m in Sources */,
@@ -330,7 +372,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Abhishek Kumar (HR7XA4S32Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Abhishek Kumar (HR7XA4S32Z)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -348,6 +391,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "5299A21E-AC7C-4A77-A1FF-46412EECD5F6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +424,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "5299A21E-AC7C-4A77-A1FF-46412EECD5F6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -394,6 +439,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleShake/SampleShake-Prefix.pch";
 				INFOPLIST_FILE = "SampleShake/SampleShake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,6 +453,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleShake/SampleShake-Prefix.pch";
 				INFOPLIST_FILE = "SampleShake/SampleShake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -471,6 +518,7 @@
 				3D0E8A9F19386C7200847B66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D0E8AA019386C7200847B66 /* Build configuration list for PBXNativeTarget "SampleShakeTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +527,7 @@
 				3D0E8AA219386C7200847B66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

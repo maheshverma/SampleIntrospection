@@ -3,16 +3,19 @@
 //  SampleShake
 //
 //  Created by Mahesh on 30/05/14.
-//  Copyright (c) 2014 Softway Solutions. All rights reserved.
+//  Copyright (c) 2014 Mahesh. All rights reserved.
 //
 
 #import "MV_AppDelegate.h"
+#import "MV_InfoManager.h"
 
 @implementation MV_AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[MV_InfoManager initializer]showAppInfo];
+    
     return YES;
 }
 							

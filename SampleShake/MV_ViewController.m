@@ -3,12 +3,15 @@
 //  SampleShake
 //
 //  Created by Mahesh on 30/05/14.
-//  Copyright (c) 2014 Softway Solutions. All rights reserved.
+//  Copyright (c) 2014 Mahesh. All rights reserved.
 //
 
 #import "MV_ViewController.h"
 
 @interface MV_ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblAppName;
+@property (weak, nonatomic) IBOutlet UILabel *lblArchieveNo;
+@property (weak, nonatomic) IBOutlet UILabel *BuildDate;
 
 @end
 
@@ -17,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)didReceiveMemoryWarning
